@@ -25,26 +25,12 @@ body, html{
 
 .pimg2{
     background-image: url('./food/food06.jpg');
-    min-height: 400px;
+    min-height: 500px;
 }
 
 .pimg3{
     background-image: url('./food/food05.jpg');
     min-height: 400px;
-}
-.section{
-    text-align: center;
-    padding:50px 80px;
-}
-
-.section-ligth{
-    background-color: #f4f4f4;
-    color:#666;
-}
-
-.section-dark{
-    background-color: #282e34;
-    color:#ddd;
 }
 
 .ptext{
@@ -56,6 +42,7 @@ body, html{
     font-size:27px;
     letter-spacing: 8px;
     text-transform: uppercase;
+    animation:scale-up-hor-center .6s cubic-bezier(.5,.575,.565,1.000) both
 }
 
 .ptext .border{
@@ -79,7 +66,7 @@ body, html{
     position: relative;
     background-color: white;
     width: 100%;
-    height: 400px;
+    height: 250px;
 }
 
 .sectionSkew:before{
@@ -98,3 +85,76 @@ body, html{
     bottom:-80px;
     z-index: 1;
 }
+.sectionDarkSkew p,.sectionDarkSkew h2{
+    margin:0;
+}
+.sectionDarkSkew{
+    position: relative;
+    background-color: #282e34;
+    color:#ddd;
+}
+
+.sectionDarkSkew:before{
+    content: '';
+    position: absolute;
+    border-bottom: 100px solid #282e34;
+    border-left: 98.75vw solid transparent;
+    top:-100px;
+}
+.sectionDarkSkew:after{
+    content: '';
+    position: absolute;
+    border-top: 80px solid #282e34;
+    border-right: 98.75vw solid transparent;
+    bottom:-80px;
+    z-index: 1;
+}
+
+.footerDark{
+    background-color: #282e34;
+    color:#ddd;
+    text-align: center;
+    font-size: 2rem;
+    margin:0;
+    height: 50px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.darkContainer,.whiteContainer{
+    margin:0 80px;
+    text-align: center;
+}
+
+.fab{
+    margin:0 6px;
+    cursor: pointer;
+}
+
+.fab:hover{
+    font-size: 2.2rem;
+    transition: 0.3s ease;
+}
+
+.fa-facebook-square:hover{
+    color:#3b5999;
+}
+
+.fa-instagram:hover{
+    color:#dd4b39;
+}
+
+.fa-twitter-square:hover{
+    color:#55acee;
+}
+
+.fa-google-plus-square:hover{
+    color:#dd4b39;
+}
+
+.fa-linkedin:hover{
+    color:#0077B5;
+}
+
+@keyframes scale-up-hor-center{0%{transform:scaleX(.4)}100%{transform:scaleX(1)}}
